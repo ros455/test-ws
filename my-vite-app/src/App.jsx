@@ -87,7 +87,7 @@ function App() {
       "limit": 10,
       "search": searchQuery
     },
-    "type": "affiliate"
+    "type": "lastAction"
   };
 
   useEffect(() => {
@@ -165,8 +165,8 @@ function App() {
           placeholder="Search by name"
         />
         {error && <p>{error}</p>}
-        {data.list?.map((item) => (
-          <p key={item._id}>{item.orderNumber}</p>
+        {data.list?.map((item, idx) => (
+          <p key={item.id}>{item.id}</p>
         ))}
       </div>
     </>
